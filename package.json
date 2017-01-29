@@ -22,6 +22,9 @@
   "homepage": "https://github.com/rolyatmax/waves#readme",
   "dependencies": {
     "alea": "^0.0.9",
+    "b-spline": "^2.0.1",
+    "lodash": "^4.17.4",
+    "new-array": "^1.0.0",
     "sketch-js": "^1.1.3"
   },
   "devDependencies": {
