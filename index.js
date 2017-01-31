@@ -4,14 +4,14 @@ import newArray from 'new-array'
 import sortBy from 'lodash/sortBy'
 import bspline from 'b-spline'
 import tinycolor from 'tinycolor2'
-// import InfoBox from './lib/info-box'
+import InfoBox from './lib/info-box'
 import colorPalettes from './lib/color-palettes.json'
 
 const seed = Math.random()
 const rand = new Alea(seed)
 
-// const info = new InfoBox(document.querySelector('.info'))
-// setTimeout(() => info.show(), 5000)
+const info = new InfoBox(document.querySelector('.info'))
+setTimeout(() => info.show(), 5000)
 
 const settings = {
   lineCount: 10,
