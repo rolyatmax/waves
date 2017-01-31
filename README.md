@@ -12,6 +12,8 @@ using splines to make, i don't know, waves i guess? 🤷🏼‍♂️
 
 ![waves](/img/2.png?raw=true "waves")
 
+![waves](/img/9.png?raw=true "waves")
+
 ![waves](/img/5.png?raw=true "waves")
 
 ![waves](/img/4.png?raw=true "waves")
