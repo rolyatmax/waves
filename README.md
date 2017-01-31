@@ -2,7 +2,7 @@
 
 using splines to make, i don't know, waves i guess? 🤷🏼‍♂️
 
-![waves](/img/1.png?raw=true "waves")
+![waves](/img/4.png?raw=true "waves")
 
 ![waves](/img/3.png?raw=true "waves")
 
@@ -16,6 +16,6 @@ using splines to make, i don't know, waves i guess? 🤷🏼‍♂️
 
 ![waves](/img/5.png?raw=true "waves")
 
-![waves](/img/4.png?raw=true "waves")
+![waves](/img/1.png?raw=true "waves")
 
 ![waves](/img/7.png?raw=true "waves")
