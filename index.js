@@ -38,13 +38,9 @@ const waves = Sketch.create({
     container.style.backgroundColor = backgroundColor
     const blending = settings.darkTheme ? 'lighten' : 'darken'
     this.globalCompositeOperation = blending
-    const y = this.height / 2
     this.lines = newArray(settings.lineCount).map((line, i) => ({
       color: i,
-      points: sortBy(newArray(settings.pointCount).map(() => ({
-        position: [rand() * (this.width - settings.padding * 2) + settings.padding, y],
-        speed: rand() * 2 - 1
-      })), (p) => p.position[0])
+      points: generatePoints(this, settings.pointCount)
     }))
   },
 
@@ -95,11 +91,29 @@ gui.add(settings, 'speed', 1, 40).step(1)
 gui.add(settings, 'darkTheme').onFinishChange(restart)
 gui.add({ newColor }, 'newColor') // todo: linearly interpolate to new colors
 
+function generatePoints (ctx, count) {
+  const y = ctx.height / 2
+  const lines = newArray(count - 2).map(() => {
+    const position = [rand() * (ctx.width - settings.padding * 2) + settings.padding, y]
+    return createPoint(position)
+  })
+  lines.unshift(createPoint([settings.padding, y]))
+  lines.push(createPoint([ctx.width - settings.padding, y]))
+  return sortBy(lines, (p) => p.position[0])
+}
+
+function createPoint (position) {
+  return {
+    position: position,
+    speed: rand() * 2 - 1
+  }
+}
+
 function calculateSplinePoints (controls, degree) {
   const points = []
   const granularity = 100
   let i = 0
-  while (i < granularity) {
+  while (i <= granularity) {
     const progress = i / granularity
     points.push(bspline(progress, degree, controls))
     i += 1
